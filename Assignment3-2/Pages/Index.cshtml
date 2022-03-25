@@ -1,10 +1,172 @@
 ﻿@page
-@model IndexModel
+@using Model;
+@model Assignment3_2.Pages.IndexModel;
 @{
     ViewData["Title"] = "Home page";
+    List<Student> students = (List<Student>)ViewData["students"];
+    List<Course> courses = (List<Course>)ViewData["courses"];
+    List<Grade> grades = (List<Grade>)ViewData["grades"];
+    String selectedCourse = ViewData["selectedCourse"].ToString();
+    String errorMsg = ViewData["errorMsg"].ToString();
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+    <div style="display:flex;width:100vw;">
+        <br>
+        <div style="margin-right:30%">
+            <div style="padding: 10px; border-style: double">
+                <p> Søk etter student</p>
+                <form asp-page-handler="Search" method="post" id="form1">
+                    <input type="text" name="input" />
+                    <button type="submit"> Søk </button>
+                </form>
+                <br>
+            </div>
+            <br />
+            <div style="padding: 10px; border-style: double">
+                <p> Velg fag </p>
+                <form asp-page-handler="SelectCourse" method="post" id="form1">
+                    <select name="course">
+                        <option> Course </option>
+                        @foreach (var course in courses)
+                        {
+                            <option value="@course.Coursecode"> @course.Coursecode </option>
+
+                        }
+                    </select>
+                    <button type="submit"> Søk </button>
+
+                </form>
+            </div>
+            <br>
+                <div style="padding: 10px; border-style: double">
+                    <p> Studentliste </p>
+                    @selectedCourse
+                    <table class="table">
+                        <tr style="text-align:left">
+                            <th>
+                                Navn
+                            </th>
+                        </tr>
+
+                        @foreach (var std in students)
+                        {
+
+                            <tr style="text-align:left">
+                                <td>
+                                    @std.Studentname
+                                </td>
+                            </tr>
+
+                        }
+
+                    </table>
+                </div>
+            </div> 
+
+
+
+        <div>
+            <div style="padding: 10px; border-style: double">
+                <p> Legg til student i kurs</p>
+                <form asp-page-handler="AddStudentToCourse" method="post">
+                    <select name="grade">
+                        <option value="A"> A </option>
+                        <option value="B"> B </option>
+                        <option value="C"> C </option>
+                        <option value="D"> D </option>
+                        <option value="E"> E </option>
+                        <option value="F"> F </option>
+                    </select>
+                    <select name="course">
+                        <option> Fag </option>
+                        @foreach (var course in courses)
+                        {
+                            <option value="@course.Coursecode"> @course.Coursecode </option>
+
+                        }
+                    </select>
+
+                    <select name="studentId">
+                        @foreach (var std in students)
+                        {
+
+                            <option value="@std.Id"> @std.Studentname </option>
+                        }
+                    </select>
+                    <button type="submit"> Legg til </button>
+                </form>
+                <p style="color:red">  @errorMsg </p>
+            </div>
+
+            <br>
+            <div style="padding: 10px; border-style: double">
+                <p> Velg karakter </p>
+                <form asp-page-handler="SelectGrade" method="post" id="form1">
+                    <select name="grade">
+                        <option value="A"> A </option>
+                        <option value="B"> B </option>
+                        <option value="C"> C </option>
+                        <option value="D"> D </option>
+                        <option value="E"> E </option>
+                        <option value="F"> F </option>
+
+
+                    </select>
+                    <button type="submit"> Søk </button>
+                </form>
+            </div>
+            <br>
+            <div style="padding: 10px; border-style: double">
+                <p> Har strøket</p>
+                <form asp-page-handler="Failed" method="post" id="form1">
+                    <button type="submit"> Stryk </button>
+                </form>
+            </div>
+            <div style="padding: 10px; border-style: double">
+                <p> Karakterliste </p>
+                <table class="table">
+                    <tr>
+                        <th>
+                            Karakter
+                        </th>
+                        <th>
+                            Emnekode
+                        </th>
+                        <th>
+                            Navn
+                        </th>
+                        <th>
+                           Slett
+                        </th>
+                    </tr>
+                    @foreach (var grade in grades)
+                    {
+
+                        <tr>
+                            <td>
+                                @grade.Grade1
+                            </td>
+                            <td>
+                                @grade.Coursecode
+                            </td>
+                            <td>
+                                @grade.Student.Studentname
+                            </td>
+                            <td>
+                                <form asp-page-handler="DeleteGrade" method="post">
+                                    <input type="hidden" name="course" value="@grade.Coursecode" />
+                                    <input type="hidden" name="studentId" value="@grade.Studentid" />
+                                    <button type="submit"> X </button>
+                                </form>
+                            </td>
+                        </tr>
+
+
+                    }
+                    </table>
+                </div> 
+            </div>
+        </div>
+    </div>

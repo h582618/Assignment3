@@ -1,10 +1,17 @@
 ﻿<Properties StartupConfiguration="{4AE6F34E-242A-4A50-B774-0112ADFC37B1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment3-2/Assignment3-2.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assignment3-2/Model/Grade.cs">
     <Files>
-      <File FileName="Assignment3-2/Startup.cs" Line="19" Column="10" />
-      <File FileName="Assignment3-2/appsettings.json" Line="9" Column="7" />
-      <File FileName="Assignment3-2/Pages/Index.cshtml.cs" Line="35" Column="24" />
-      <File FileName="Assignment3-2/Assignment3-2.csproj" Line="1" Column="1" />
+      <File FileName="Assignment3-2/Startup.cs" Line="42" Column="14" />
+      <File FileName="Assignment3-2/appsettings.json" />
+      <File FileName="Assignment3-2/Assignment3-2.csproj" />
+      <File FileName="Assignment3-2/Pages/Error.cshtml" />
+      <File FileName="Assignment3-2/Pages/Error.cshtml.cs" />
+      <File FileName="Assignment3-2/Pages/Index.cshtml" Line="51" Column="40" />
+      <File FileName="Assignment3-2/Program.cs" />
+      <File FileName="Assignment3-2/Pages/Crud.cshtml" Line="4" Column="1" />
+      <File FileName="Assignment3-2/Pages/Crud.cshtml.cs" Line="1" Column="1" />
+      <File FileName="Assignment3-2/Model/Grade.cs" Line="14" Column="6" />
+      <File FileName="Assignment3-2/Pages/Index.cshtml.cs" Line="119" Column="26" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,16 +19,15 @@
           <Option id="ShowAllFiles" value="True" />
           <Node name="Assignment3-2" expanded="True">
             <Node name="Assignment3-2" expanded="True">
-              <Node name="Pages" expanded="True">
-                <Node name="Index.cshtml" expanded="True" />
+              <Node name="Model" expanded="True">
+                <Node name="Grade.cs" selected="True" />
               </Node>
-              <Node name="Assignment3-2.csproj" selected="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Crud.cshtml" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

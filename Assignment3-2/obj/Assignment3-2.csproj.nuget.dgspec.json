@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/simonkobbenes/Projects/Assignment3-2/Assignment3-2/Assignment3-2.csproj": {}
+    "/Users/matiasvedeler/Projects/dat154/DAT154_Assignment3/Assignment3-2/Assignment3-2.csproj": {}
   },
   "projects": {
-    "/Users/simonkobbenes/Projects/Assignment3-2/Assignment3-2/Assignment3-2.csproj": {
+    "/Users/matiasvedeler/Projects/dat154/DAT154_Assignment3/Assignment3-2/Assignment3-2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/simonkobbenes/Projects/Assignment3-2/Assignment3-2/Assignment3-2.csproj",
+        "projectUniqueName": "/Users/matiasvedeler/Projects/dat154/DAT154_Assignment3/Assignment3-2/Assignment3-2.csproj",
         "projectName": "Assignment3-2",
-        "projectPath": "/Users/simonkobbenes/Projects/Assignment3-2/Assignment3-2/Assignment3-2.csproj",
-        "packagesPath": "/Users/simonkobbenes/.nuget/packages/",
-        "outputPath": "/Users/simonkobbenes/Projects/Assignment3-2/Assignment3-2/obj/",
+        "projectPath": "/Users/matiasvedeler/Projects/dat154/DAT154_Assignment3/Assignment3-2/Assignment3-2.csproj",
+        "packagesPath": "/Users/matiasvedeler/.nuget/packages/",
+        "outputPath": "/Users/matiasvedeler/Projects/dat154/DAT154_Assignment3/Assignment3-2/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/simonkobbenes/.nuget/NuGet/NuGet.Config"
+          "/Users/matiasvedeler/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -51,6 +51,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.1.3, )"
             }
           },
           "imports": [
@@ -63,20 +67,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.osx-x64",
-              "version": "[3.1.22, 3.1.22]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -85,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.103/RuntimeIdentifierGraph.json"
         }
       }
     }
